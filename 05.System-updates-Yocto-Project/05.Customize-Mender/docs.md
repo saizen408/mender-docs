@@ -89,8 +89,8 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/<DIRECTORY-WITH-IDENTITY-SCRIPT>"
 SRC_URI_append = " file://mender-device-identity"
 
 do_install_append() {
-    install -d ${datadir}/mender/identity
-    install -m 755 ${WORKDIR}/mender-device-identity ${datadir}/mender/identity/mender-device-identity
+    install -d {D}${datadir}/mender/identity
+    install -m 755 ${WORKDIR}/mender-device-identity {D}${datadir}/mender/identity/mender-device-identity
 }
 ```
 
